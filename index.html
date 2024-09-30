@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <style>
+    body{
+      background-color: silver;
+      color: #f;
+      background-image: url("Zzz.png");
+    }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        label{
+          font-family: serif;
+          font-size: 20px;
+        }
+        .h2{
+          background-color: blue;
+          text-align: center;
+          font-family: serif;
+          font-size: 30px;
+        }
+        .up{
+          background-color: white;
+          transition: 50px;
+          
+          padding: 20px;
+          border-radius: 50px;
+          margin-left: 50px;
+          margin-right: 50px;
+          margin-top: 50px;
+          height: 600px;
+        }
+        .button{
+          margin-top: 45p
+          width: 70px;
+          text-align: center;
+          align-items: center;
+          background-color: red;
+        margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="h2">sign up Form</h2>
+       
+       <div class="up">
+         
+    <form id="registrationForm" enctype="multipart/form-data">
+        <!-- Username -->
+        <div>
+            <label for="username">Username:</label> <br>
+            <input type="text" id="username" name="username" required>
+            <span class="error" id="usernameError"></span>
+        </div>
+            <br>
+        <!-- Email -->
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+              <br>
+        <!-- Password -->
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" 
+            onkeyup="checkPasswordLength(this.value)"  required>
+            <span class="error" id="passwordError" style="color:red"></span>
+             <span class="error" id="passError" style="color:red">u better to make strong ur password till it turns to green</span>
+        </div>
+               <br>
+        <!-- Confirm Password -->
+        <div>
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required> <input type="checkbox" id="showPassword"> Show Password
+            <span class="error" id="confirmPasswordError"></span>
+        </div>
+       
+       <div>
+         <label>
+          <p id="gender" >
+            gender:<br>
+          <input type="radio" name="sex" value="male"/ required>male 
+           <input type="radio" name="sex" value="female"/ d>female
+          </p>
+          </label>
+       </div>
+        <!-- Show Password -->
+        
+        <br>
+        <!-- Date of Birth -->
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <span class="error" id="dobError"></span>
+        </div>
+        <br>
+        <!-- Country -->
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="UK">United Kingdom</option>
+            </select>
+            <span class="error" id="countryError"></span>
+        </div>
+         <br>
+        <!-- Image Upload -->
+        <div>
+            <label for="image">Profile Image (PNG or JPG):</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+            <span class="error" id="imageError"></span>
+        </div>
+      <br>
+        <!-- Submit Button -->
+        <button type="submit" class="button">Submit</button>
+        <br>
+       
+    </form>
+       </div>
+     <script src="valid.js"></script>
+</body>
+</html>
+        
+     
+        
+   
